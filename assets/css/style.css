@@ -1,0 +1,82 @@
+* {
+    background-color: hsl(41, 100%, 5%);
+}
+
+h1, h2, h3, p {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: hsl(41, 100%, 50%);
+}
+
+h1 {
+    font-size: xx-large;
+}
+
+h2 {
+    font-size: x-large;
+}
+
+h3 {
+    font-size: large;
+}
+
+p {
+    font-size: small;
+    font-weight: 300;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+header p {
+    color: white;
+    padding: 20px 20%;
+    margin: auto;
+    
+}
+
+pre {
+    color: white;
+    font-family: monospace;
+    padding: 2%;
+    background: linear-gradient(0deg, hsl(41, 100%, 50%), hsl(41, 100%, 10%));
+    border-radius: 5px;
+    margin: 10px;
+}
+
+code {
+    background: transparent;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 40px;
+    align-items: center;
+}
+
+main {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 2fr);
+    padding: 20px;
+}
+
+.box {
+    margin: 5%;
+
+}
+
+.box p {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.box h2 {
+    border: 2px solid white;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.p_precode {
+    border: 2px dashed white;
+}
