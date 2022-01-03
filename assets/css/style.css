@@ -1,13 +1,23 @@
-* {
-  background-color: hsl(41, 100%, 5%);
+/* CSS VARIABLES FOR COLORS */
+:root {
+  --orange: hsl(41, 100%, 50%);
+  --black: hsl(41, 100%, 5%);
+  --dark-orange: hsl(41, 100%, 10%);
 }
 
+* {
+  background-color: var(--black);
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
 h1,
 h2,
 h3,
 p {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  color: hsl(41, 100%, 50%);
+  color: var(--orange);
 }
 
 h1 {
@@ -45,13 +55,14 @@ pre {
   color: white;
   font-family: monospace;
   padding: 2%;
-  background: linear-gradient(0deg, hsl(41, 100%, 50%), hsl(41, 100%, 10%));
+  background: linear-gradient(0deg, var(--orange), var(--dark-orange));
   border-radius: 5px;
   margin: 10px;
 }
 
 code {
   background: transparent;
+  user-select: all;
 }
 
 
@@ -62,9 +73,11 @@ main {
   grid-template-columns: repeat(3, 1fr);
   padding: 30px;
   gap: 2%;
+  grid-auto-rows: 1fr;
 }
 
 .box {
+  position: relative;
 }
 
 .box p {
@@ -77,10 +90,16 @@ main {
   margin: 10px;
   padding: 5px;
   border-radius: 5px;
+  position: relative;
+  z-index: 2; 
 }
 
 .p_precode {
   border: 2px dashed white;
+  position: relative;
+  margin-top: -30px;
+  padding-top: 20px;
+
 }
 
 footer {
@@ -94,14 +113,30 @@ footer {
     color: red;
 }
 
-@media screen and (max-width: 991px) {
+/* MEDIA QUERIES */
+@media screen and (max-width: 992px) {
   main {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   main {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+/* ANIMATION */
+
+h2, .p_precode{
+  border-radius: 8px;
+  transition: all 0.5s ease-in-out;
+}
+
+.p_precode:hover,
+ h2:hover {
+  box-shadow: inset 0px 0px 8px 
+var(--orange), 0 0 15px 
+var(--orange);
+}
+          
